@@ -124,7 +124,7 @@ const Navbar = () => {
             <button
               key={item}
               onClick={() => {
-                scrollToSection(item.toLowerCase().replace(" ", "-"));
+                handleNavigation(item.toLowerCase().replace(" ", "-"));
                 setIsOpen(false);
               }}
               style={{
