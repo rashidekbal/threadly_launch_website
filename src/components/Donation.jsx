@@ -2,7 +2,7 @@ import React from "react";
 import qrCode_icon from "/assets/Qr.jpeg";
 const Donation = () => {
   return (
-    <section id="donate" style={{ backgroundColor: "#fff0e5" }}>
+    <section id="donate" style={{ backgroundColor: "var(--donate-bg)" }}>
       <div className="container" style={{ textAlign: "center" }}>
         <h2>Support the Project</h2>
         <p>
@@ -14,7 +14,7 @@ const Donation = () => {
           style={{
             marginTop: "48px",
             padding: "24px",
-            background: "white",
+            background: "var(--card-bg)",
             display: "inline-block",
             borderRadius: "16px",
             boxShadow: "var(--shadow-md)",

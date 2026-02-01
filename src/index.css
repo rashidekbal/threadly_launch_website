@@ -15,6 +15,26 @@
   --font-family:
     "Product Sans", "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --nav-height: 64px;
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
+  --footer-bg: #f1f3f4;
+  --donate-bg: #fff0e5;
+}
+
+.dark {
+  --primary-color: #8ab4f8;
+  --secondary-color: #81c995;
+  --text-color: #e8eaed;
+  --text-secondary: #9aa0a6;
+  --background-color: #202124;
+  --surface-color: #292a2d;
+  --border-color: #3c4043;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3), 0 1px 3px 1px rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --nav-bg-scrolled: rgba(32, 33, 36, 0.9);
+  --card-bg: #2d2e30;
+  --footer-bg: #171717;
+  --donate-bg: #2c2828;
 }
 
 body {
@@ -25,6 +45,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 section {
@@ -136,11 +157,11 @@ p {
 }
 
 .card {
-  background: white;
+  background: var(--card-bg);
   border-radius: var(--border-radius);
   padding: 24px;
   border: 1px solid var(--border-color);
-  transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s, background-color 0.3s ease;
 }
 
 .card:hover {

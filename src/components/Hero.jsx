@@ -48,7 +48,7 @@ const Hero = () => {
             position: "relative",
             width: "300px",
             height: "auto",
-            backgroundColor: "#fff",
+            backgroundColor: "var(--card-bg)",
             borderRadius: "24px",
             boxShadow: "var(--shadow-md)",
             border: "4px solid #e0e0e0",

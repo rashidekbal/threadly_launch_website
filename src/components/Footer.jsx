@@ -4,9 +4,10 @@ const Footer = () => {
   return (
     <footer
       style={{
-        backgroundColor: "#f1f3f4",
+        backgroundColor: "var(--footer-bg)",
         padding: "48px 24px",
         textAlign: "center",
+        borderTop: "1px solid var(--border-color)",
       }}
     >
       <div className="container">

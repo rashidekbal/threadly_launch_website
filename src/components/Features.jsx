@@ -71,7 +71,7 @@ const Features = () => {
                 boxShadow: "var(--shadow-md)",
                 border: "4px solid #e0e0e0",
                 padding: "4px",
-                backgroundColor: "#fff",
+                backgroundColor: "var(--card-bg)",
                 flexShrink: 0,
               }}
             >

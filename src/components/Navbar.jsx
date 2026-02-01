@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +31,7 @@ const Navbar = () => {
         alignItems: "center",
         justifyContent: "space-between",
         padding: "0 24px",
-        backgroundColor: scrolled ? "rgba(255, 255, 255, 0.9)" : "transparent",
+        backgroundColor: scrolled ? "var(--nav-bg-scrolled)" : "transparent",
         backdropFilter: scrolled ? "blur(10px)" : "none",
         zIndex: 1000,
         transition: "all 0.3s ease",
@@ -80,6 +81,7 @@ const Navbar = () => {
             Download
           </a>
         </button>
+        <ThemeToggle />
       </div>
     </nav>
   );
