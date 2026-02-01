@@ -3,6 +3,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +52,7 @@ const Navbar = () => {
         <span>Threadly</span>
       </div>
 
-      <div style={{ display: "flex", gap: "24px" }}>
+      <div className="desktop-menu">
         {["Features", "Open Source", "FAQ", "Donate"].map((item) => (
           <button
             key={item}
@@ -83,6 +84,69 @@ const Navbar = () => {
         </button>
         <ThemeToggle />
       </div>
+
+      <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+        {/* Mobile Toggle Button */}
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle Menu"
+        >
+          {isOpen ? "✕" : "☰"}
+        </button>
+        {/* Theme Toggle for Mobile (Visible when desktop menu hidden, but we might want it always accessible or inside menu? Let's keep it in desktop menu for now, but valid point. Actually, easier to duplicate or move theme toggle. Let's put theme toggle next to hamburger on mobile.) */}
+        <div className="mobile-only-toggle" style={{ display: "none" }}>
+          {" "}
+          {/* We handles this via CSS if needed, but for now let's just use the one in menu or separate. Simple approach: Keep theme toggle in desktop menu, add another one for mobile or just show it.*/}
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {isOpen && (
+        <div className="mobile-menu">
+          {["Features", "Open Source", "FAQ", "Donate"].map((item) => (
+            <button
+              key={item}
+              onClick={() => {
+                scrollToSection(item.toLowerCase().replace(" ", "-"));
+                setIsOpen(false);
+              }}
+              style={{
+                background: "none",
+                border: "none",
+                fontSize: "1.1rem",
+                color: "var(--text-color)",
+                cursor: "pointer",
+                fontWeight: 500,
+                width: "100%",
+                textAlign: "center",
+                padding: "12px",
+              }}
+            >
+              {item}
+            </button>
+          ))}
+          <button
+            className="btn btn-primary"
+            style={{ width: "100%", justifyContent: "center" }}
+          >
+            <a
+              href="https://github.com/rashidekbal/threadly/releases"
+              style={{
+                textDecoration: "none",
+                color: "white",
+                width: "100%",
+                display: "block",
+              }}
+            >
+              Download App
+            </a>
+          </button>
+          <div style={{ marginTop: "16px" }}>
+            <ThemeToggle />
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
