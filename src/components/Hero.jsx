@@ -19,8 +19,8 @@ const Hero = () => {
           Share <span style={{ color: "var(--secondary-color)" }}>Freely</span>.
         </h1>
         <p style={{ fontSize: "1.25rem", maxWidth: "480px" }}>
-          Threadly is the open-source social platform designed for authentic
-          connections. No algorithms, just you and your community.
+          Threadly is the open-source social platform for real-time connection.
+          Experience native speed, offline access, and a community-first design.
         </p>
         <div style={{ display: "flex", gap: "16px", marginTop: "32px" }}>
           <a

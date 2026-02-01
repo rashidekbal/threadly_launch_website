@@ -16,7 +16,7 @@ const OpenSource = () => {
         >
           <div className="card" style={{ textAlign: "left" }}>
             <h3>📱 Android Client</h3>
-            <p>Native Android application built with Jetpack Compose.</p>
+            <p>Native Android application built with Java, MVVM, and Room.</p>
             <a
               href="https://github.com/rashidekbal/Threadly"
               target="_blank"
@@ -30,7 +30,7 @@ const OpenSource = () => {
 
           <div className="card" style={{ textAlign: "left" }}>
             <h3>🖥️ Server</h3>
-            <p>Robust backend API built with Java Spring Boot.</p>
+            <p>Robust backend API built with Node.js, Express, and MySQL.</p>
             <a
               href="https://github.com/rashidekbal/ThreadlyServer"
               target="_blank"

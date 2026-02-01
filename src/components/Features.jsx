@@ -3,26 +3,28 @@ import React from "react";
 const Features = () => {
   const features = [
     {
-      title: "Share Moments",
-      description: "Post your photos and thoughts instantly with your circle.",
-      icon: "📸",
-    },
-    {
-      title: "Stay Connected",
+      title: "Real-Time Chat",
       description:
-        "Real-time messaging to keep you close to friends and family.",
-      icon: "💬",
+        "Powered by Socket.IO for instant messaging and seamless connectivity.",
+      icon: "⚡",
     },
     {
-      title: "Explore Reels",
-      description: "Discover short, entertaining videos from creators.",
+      title: "Offline First",
+      description:
+        "Built with Room Database to keep your content accessible anywhere.",
+      icon: "💾",
+    },
+    {
+      title: "Native Performance",
+      description:
+        "Crafted with Java & MVVM architecture for a smooth Android experience.",
+      icon: "🚀",
+    },
+    {
+      title: "Rich Media",
+      description:
+        "Watch Reels with ExoPlayer and capture moments with CameraX.",
       icon: "🎬",
-    },
-    {
-      title: "Safe & Private",
-      description:
-        "Your data is yours. End-to-end encryption for your peace of mind.",
-      icon: "🔒",
     },
   ];
 
