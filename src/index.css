@@ -1,27 +1,4 @@
 :root {
-  --primary-color: #4285f4;
-  --secondary-color: #34a853;
-  --text-color: #202124;
-  --text-secondary: #5f6368;
-  --background-color: #ffffff;
-  --surface-color: #f8f9fa;
-  --border-color: #dadce0;
-  --spacing-unit: 8px;
-  --border-radius: 8px;
-  --shadow-sm:
-    0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
-  --shadow-md:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --font-family:
-    "Product Sans", "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  --nav-height: 64px;
-  --nav-bg-scrolled: rgba(255, 255, 255, 0.9);
-  --card-bg: #ffffff;
-  --footer-bg: #f1f3f4;
-  --donate-bg: #fff0e5;
-}
-
-.dark {
   --primary-color: #8ab4f8;
   --secondary-color: #81c995;
   --text-color: #e8eaed;
@@ -35,6 +12,27 @@
   --card-bg: #2d2e30;
   --footer-bg: #171717;
   --donate-bg: #2c2828;
+  --font-family:
+    "Product Sans", "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --nav-height: 64px;
+}
+
+.light {
+  --primary-color: #4285f4;
+  --secondary-color: #34a853;
+  --text-color: #202124;
+  --text-secondary: #5f6368;
+  --background-color: #ffffff;
+  --surface-color: #f8f9fa;
+  --border-color: #dadce0;
+  --shadow-sm:
+    0 1px 2px 0 rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+  --shadow-md:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.9);
+  --card-bg: #ffffff;
+  --footer-bg: #f1f3f4;
+  --donate-bg: #fff0e5;
 }
 
 body {

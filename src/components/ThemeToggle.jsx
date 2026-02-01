@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from "react";
 
 const ThemeToggle = () => {
-  const [theme, setTheme] = useState(
-    localStorage.getItem("theme") ||
-      (window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"),
-  );
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
   useEffect(() => {
-    if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+    if (theme === "light") {
+      document.documentElement.classList.add("light");
     } else {
-      document.documentElement.classList.remove("dark");
+      document.documentElement.classList.remove("light");
     }
     localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   return (
@@ -38,9 +33,9 @@ const ThemeToggle = () => {
         color: "var(--text-color)",
         marginLeft: "16px",
       }}
-      aria-label="Toggle Dark Mode"
+      aria-label="Toggle Light Mode"
     >
-      {theme === "light" ? "🌙" : "☀️"}
+      {theme === "dark" ? "☀️" : "🌙"}
     </button>
   );
 };
