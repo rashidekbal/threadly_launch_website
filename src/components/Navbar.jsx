@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,11 +16,22 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (id) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    setIsOpen(false);
   };
 
   return (
@@ -49,7 +63,9 @@ const Navbar = () => {
           color: "var(--primary-color)",
         }}
       >
-        <span>Threadly</span>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <span>Threadly</span>
+        </Link>
       </div>
 
       <div className="desktop-menu">
@@ -57,7 +73,7 @@ const Navbar = () => {
           <button
             key={item}
             onClick={() =>
-              scrollToSection(item.toLowerCase().replace(" ", "-"))
+              handleNavigation(item.toLowerCase().replace(" ", "-"))
             }
             style={{
               background: "none",

@@ -19,14 +19,7 @@ const Hero = () => {
           Threadly is the open-source social platform for real-time connection.
           Experience native speed, offline access, and a community-first design.
         </p>
-        <div
-          style={{
-            display: "flex",
-            gap: "16px",
-            marginTop: "32px",
-            justifyContent: "inherit",
-          }}
-        >
+        <div className="hero-buttons">
           <a
             href="https://github.com/rashidekbal/threadly/releases"
             className="btn btn-primary"

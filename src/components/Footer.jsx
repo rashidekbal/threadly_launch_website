@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,20 +22,20 @@ const Footer = () => {
             marginBottom: "24px",
           }}
         >
-          <a
-            href="#"
+          <Link
+            to="/privacy"
             style={{ color: "var(--text-secondary)", textDecoration: "none" }}
           >
             Privacy
-          </a>
-          <a
-            href="#"
+          </Link>
+          <Link
+            to="/terms"
             style={{ color: "var(--text-secondary)", textDecoration: "none" }}
           >
             Terms
-          </a>
+          </Link>
           <a
-            href="#"
+            href="mailto:rtechdevlopment123@gmail.com"
             style={{ color: "var(--text-secondary)", textDecoration: "none" }}
           >
             Contact
