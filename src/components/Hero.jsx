@@ -2,27 +2,31 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section
-      style={{
-        display: "grid",
-        gridTemplateColumns: "1fr 1fr",
-        gap: "48px",
-        paddingTop: "120px",
-        alignItems: "center",
-        minHeight: "80vh",
-      }}
-    >
-      <div className="animate-fade-in">
+    <section className="hero-section">
+      <div className="animate-fade-in hero-content">
         <h1 style={{ marginBottom: "24px" }}>
           Connect <span style={{ color: "var(--primary-color)" }}>Deeply</span>,
           <br />
           Share <span style={{ color: "var(--secondary-color)" }}>Freely</span>.
         </h1>
-        <p style={{ fontSize: "1.25rem", maxWidth: "480px" }}>
+        <p
+          style={{
+            fontSize: "1.25rem",
+            maxWidth: "480px",
+            margin: "0 auto 24px 0",
+          }}
+        >
           Threadly is the open-source social platform for real-time connection.
           Experience native speed, offline access, and a community-first design.
         </p>
-        <div style={{ display: "flex", gap: "16px", marginTop: "32px" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: "16px",
+            marginTop: "32px",
+            justifyContent: "inherit",
+          }}
+        >
           <a
             href="https://github.com/rashidekbal/threadly/releases"
             className="btn btn-primary"
@@ -36,7 +40,7 @@ const Hero = () => {
       </div>
 
       <div
-        className="animate-fade-in"
+        className="animate-fade-in hero-image"
         style={{
           display: "flex",
           justifyContent: "center",

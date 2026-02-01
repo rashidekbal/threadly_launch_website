@@ -85,7 +85,7 @@ const Navbar = () => {
         <ThemeToggle />
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
+      <div className="mobile-toggle-wrapper">
         {/* Mobile Toggle Button */}
         <button
           className="mobile-menu-btn"
