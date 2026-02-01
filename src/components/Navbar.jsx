@@ -51,7 +51,7 @@ const Navbar = () => {
       </div>
 
       <div style={{ display: "flex", gap: "24px" }}>
-        {["Features", "Open Source", "Donate"].map((item) => (
+        {["Features", "Open Source", "FAQ", "Donate"].map((item) => (
           <button
             key={item}
             onClick={() =>
