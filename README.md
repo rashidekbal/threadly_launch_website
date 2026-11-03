@@ -1,16 +1,26 @@
-# React + Vite
+# Threadly Launch & Showcase Website (`threadly_launch_website`)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 📚 **Engineering & Architecture Documentation**: For complete architecture breakdowns, contract definitions, component hierarchies, and developer playbooks, see the [**Docs-as-Code Documentation Suite**](docs/README.md).
+> - [Codebase Inventory & Module Index](docs/CODEBASE_INDEX.md)
+> - [System Architecture & Runtime Boundaries](docs/01-architecture/overview.md)
+> - [Component Tree & Architecture](docs/01-architecture/component-architecture.md)
+> - [External Link Contracts & Asset Registry](docs/02-contracts-and-apis/api-contracts.md)
+> - [Local Setup & Development Playbook](docs/03-developer-playbook/local-setup.md)
+> - [Architecture Decision Records (ADRs)](docs/05-adrs/ADR-001-core-engine-choice.md)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚡ Overview
+**Threadly Launch Website** is the official public landing page, product showcase, and APK distribution hub for the Threadly social media ecosystem, built with **React 19**, **Vite 7**, and **React Router 7**.
 
-## React Compiler
+## 🚀 Quick Start
+```bash
+# Install dependencies
+npm install
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Start local development server
+npm run dev
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Build for production
+npm run build
+```
